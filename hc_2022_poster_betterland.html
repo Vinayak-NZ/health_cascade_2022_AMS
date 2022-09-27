@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Lessons from my first study</title>
+
+
+<script src="hc_2022_poster_betterland_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="hc_2022_poster_betterland_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 45px;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #e18b2224;
+color: #4739a2;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #4739a220;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: Rasa;
+color: #000000;
+}
+span.citation {
+  color: #e18b22;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #e18b22;
+}
+#title {
+font-size: 125pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #4739a2;
+margin: 0;
+line-height: 90%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #46e7fd;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #e18b22;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in / 2);
+height: 32in;
+position: absolute;
+margin-left: calc(46in / 4);
+background-color: #4739a2;
+color: #FFFFFF90;
+font-family: Special Elite;
+background-image: linear-gradient(#4739a2 50%, #e18b22);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 170px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Lessons from my first study</h1>
+<br>
+<h3 id="author" class="author">
+
+Vinayak Anand Kumar<sup> 1, <a class="orcid" href="https://orcid.org/0000-0002-2972-5887"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+
+</h3>
+
+<h5 id="author_extra" class="author_extra">
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> School of Business, Social &amp; Decision Sciences | Jacobs University
+</p>
+
+</div>
+<div id="a-real-hard-case" class="section level1">
+<h1>A real “Hard Case”</h1>
+<p>Reviews of digital health tools have demonstrated that few get implemented, and even fewer are maintained (Yeager, 2018). This hasn’t stopped researchers and developers from studying and building digital tools that either facilitate or enable the delivery of health care services. In order to increase the chances of future tools succeeding, there is value in exploring the experiences of previous teams and projects. That is:</p>
+<ul>
+<li>What were the facilitating factors of co-creating digital health tools?</li>
+<li>How did the facilitating factors affect the co-creation process?<br />
+</li>
+<li>What were the challenges of co-creating digital health tools?</li>
+<li>How did the challenges affect the co-creation process?</li>
+</ul>
+<p>Using <strong>case study methodology</strong>, with a multi-case adaptive design, I am exploring these research questions in the co-creation of an <code>obstetrics web app</code>, a <code>cardiovascular rehabilitation native app</code> and a <code>long covid chatbot</code>. Case studies are an ideal method when (Yin, 2018):</p>
+<ul>
+<li>Your are looking to <strong>understand</strong> complex situations (i.e. how/ why)<br />
+</li>
+<li>You have access to a range of data sources that can provide <strong>rich detail</strong> about each case<br />
+</li>
+<li>Your focus is to get a <strong>real world perspective</strong></li>
+</ul>
+</div>
+<div id="to-be-an-expert-listen-to-the-experts" class="section level1">
+<h1>To be an expert, listen to the experts</h1>
+<p>One of the methods employed to gather information about each case, with respect to the research questions, was the <strong>expert interview</strong>. Experts are people that are knowledgeable about a particular subject; and can be identified by holding a particular position, through membership to a project/ team, or by status.<br />
+<br>
+<br>
+<br>
+<br>
+The expert interview is a method for getting information about a particular field of interest (Bogner, 2009); ideal for drawing on the experiences and insights of people that have been involved in the research and development of digital health tools. The lessons I learnt from carrying out the expert interviews were:</p>
+<ul>
+<li>Do your homework<br />
+</li>
+<li>Practice, Practice, Practice<br />
+</li>
+<li>Build rapport<br />
+</li>
+<li>Ensure your interviewee feels safe<br />
+</li>
+<li>Be willing to adapt</li>
+</ul>
+</div>
+<div id="open-science" class="section level1">
+<h1>Open Science</h1>
+<blockquote>
+<p>“a piece of knowledge, unlike a piece of physical property, can be shared by large groups of people without making anybody poorer.”</p>
+<footer>
+— Aaron Swartz
+</footer>
+</blockquote>
+<p>My goal is for other researchers to apply/ replicate my methods with as little cost as possible. Over the past few months, I’ve come across some tools that may also help you in your research.</p>
+<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+stage
+</th>
+<th style="text-align:left;">
+tool
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+design
+</td>
+<td style="text-align:left;">
+open science framework
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+collect
+</td>
+<td style="text-align:left;">
+open broadcast studio
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+process
+</td>
+<td style="text-align:left;">
+quali anon
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<p>Please scan the QR code for:</p>
+<ul>
+<li>Insights from the data and literature<br />
+</li>
+<li>Reference list<br />
+</li>
+<li>Links to resources/ tools mentioned<br />
+</li>
+<li>Code used to create the poster</li>
+</ul>
+<p><br>
+<br>
+<br></p>
+<p><img src="images/logo_no_change.png" style="width:100.0%" /></p>
+<p>Health CASCADE is a Marie Skłodowska-Curie Innovative Training Network funded by the European Union’s Horizon 2020 research and innovation programme under Marie Skłodowska-Curie grant agreement n° 956501</p>
+</div>
+
+</div>
+<div class="main">
+<p>The power of <strong>case study methodology</strong>. Lessons from <strong>expert interviews</strong>. Aspirations for <strong>open science</strong>.<br><br> <img src="images/hc_logo.png" class="main-pic" /></p>
+
+<img src="images/qr-code-modified.png" class="main-img-right" />
+</div>
+</div>
+
+
+
+</body>
+</html>
