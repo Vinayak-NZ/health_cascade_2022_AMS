@@ -2,7 +2,11 @@
 ## Vinny's first study: Supplement to the Poster Presentation
 
 ### Power of case study methodology  
-
+Case study research might be the right approach when  
+  
+  1) Your main research questions are how/ why questions  
+  2) You have little or no control over events  
+  3) Your focus of study is a phenomenon that is still "active"
 
 
 ### Expert interviews  
@@ -10,7 +14,7 @@
 
 ### Open science  
 Study Design: [Open Science Framework](https://osf.io)  
-Data Collection: [Open Broadcast Studio](https://obsproject.com)
+Data Collection: [Open Broadcast Studio](https://obsproject.com)  
 Data Processing: [Quali Anon](https://www.qualiservice.org/en/the-helpdesk/tools.html)  
 
 
