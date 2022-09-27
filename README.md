@@ -10,7 +10,25 @@ Case study research might be the right approach when
 
 
 ### Expert interviews  
+Experts are generally identified by the researcher, with respect to the *Research Question*.  
+Based on our research question, we have a domain that we are interested in studying.  
+We consider someone as an expert if they possess knowledge about our domain of interest, that although others may possess, is not immediately accessible by others in the domain.  
 
+Prior to engaging in a program of work, consulting experts can help generate useful knowledge, and validate hypotheses.  
+Consulting experts can often be the way to go because:  
+  
+  1) There are a lack of other data sources with the information you are after  
+  2) It could be more efficient to consult experts directly  
+  3) Consulting a range of experts could provide different points of view, and reveal possible areas of conflict  
+  4) Provide easier access to information for evaluation purposes  
+  5) Can be a reflective/ even enjoyable exercise for experts  
+
+Some considerations when carrying out expert interviews:  
+  
+  - create a situation with which the interviewee feels comfortable; conduct a quai normal conversation    
+  - become familiar with the language of the experts' universe  
+  - demonstrate your competence in the domain  
+  - adopt a flexible interview situation  
 
 ### Open science  
 Study Design: [Open Science Framework](https://osf.io)  
